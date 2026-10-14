@@ -1,0 +1,4 @@
+import {createClient} from '@supabase/supabase-js';
+export function adminDb(){const url=process.env.NEXT_PUBLIC_SUPABASE_URL;const key=process.env.SUPABASE_SERVICE_ROLE_KEY;if(!url||!key)throw new Error('Supabase server environment variables missing');return createClient(url,key,{auth:{persistSession:false,autoRefreshToken:false}})}
+export function browserDb(){const url=process.env.NEXT_PUBLIC_SUPABASE_URL;const key=process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;if(!url||!key)throw new Error('Supabase public environment variables missing');return createClient(url,key)}
+export async function requireAdmin(request:Request){const token=request.headers.get('authorization')?.replace(/^Bearer\s+/i,'');if(!token)return false;const db=adminDb();const {data:{user},error}=await db.auth.getUser(token);if(error||!user)return false;const {data}=await db.from('admin_users').select('user_id').eq('user_id',user.id).maybeSingle();return !!data}

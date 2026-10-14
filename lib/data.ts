@@ -1,0 +1,1 @@
+export const courses=[{code:'B',name:'B kategoriya',desc:'Yengil avtomobil boshqarishni o‘rganing.',icon:'🚗'},{code:'BC',name:'BC kategoriya',desc:'Yengil va yuk avtomobillari bo‘yicha tayyorgarlik.',icon:'🚙'},{code:'C',name:'C kategoriya',desc:'Yuk avtomobillari uchun haydovchilik tayyorgarligi.',icon:'🚚'}];

@@ -1,0 +1,1 @@
+DreamDrive: Supabase project URL and publishable key are configured in .env.example. Copy to .env.local on your own machine. Server secret remains intentionally blank. This project is NOT deployed and its functionality is NOT tested end-to-end. Existing frontend differs from the approved v5 HTML preview. Never send your secret key or database password.
