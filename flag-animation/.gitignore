@@ -1,0 +1,5 @@
+__pycache__/
+node_modules/
+source-image
+flags-1080p.mp4
+*.log

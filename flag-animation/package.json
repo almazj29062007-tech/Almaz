@@ -1,0 +1,14 @@
+{
+  "name": "uzbekistan-usa-flag-animation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A five-second WebGL flag animation with local 1080p MP4 export",
+  "scripts": {
+    "start": "python3 server.py",
+    "export": "node export.cjs",
+    "check": "node --check app.js && node --check export.cjs && python3 -m py_compile server.py"
+  },
+  "dependencies": {
+    "playwright-core": "^1.56.0"
+  }
+}
